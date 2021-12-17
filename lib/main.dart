@@ -1,4 +1,5 @@
-import 'package:flower_guide/provider/home_provider.dart';
+import 'package:flower_guide/provider/bottom_bar_provider.dart';
+import 'package:flower_guide/provider/text_field_provider.dart';
 import 'package:flower_guide/view/screens/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -7,9 +8,9 @@ void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-          create: (_) => HomeProvider(),
-        ),
+        ChangeNotifierProvider(create: (_) => BottomBarProvider()),
+        ChangeNotifierProvider(create: (_) => TextFieldProvider()),
+
       ],
       child: const MyApp(),
     ),
