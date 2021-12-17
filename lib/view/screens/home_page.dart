@@ -1,4 +1,3 @@
-import 'package:flower_guide/core/constants/colors.dart';
 import 'package:flower_guide/view/widgets/my_bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -13,8 +12,7 @@ class HomePage extends StatelessWidget {
           color: MyColors.primary,
           fontSize: 24.0,
           fontWeight: FontWeight.w600,
-          decoration: TextDecoration.lineThrough, 
-        
+          decoration: TextDecoration.lineThrough,  
         ),),
       ),
       bottomNavigationBar: MyBottomBar(),
