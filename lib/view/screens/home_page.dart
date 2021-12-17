@@ -10,7 +10,9 @@ class HomePage extends StatelessWidget {
     return const Scaffold(
       body: Center(
         child: Text("Hello World !", style: TextStyle(
-          color: MyColors.primary
+          color: MyColors.primary,
+          fontSize: 24.0,
+          fontWeight: FontWeight.w600,
         ),),
       ),
       bottomNavigationBar: MyBottomBar(),
