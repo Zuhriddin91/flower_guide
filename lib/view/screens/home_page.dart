@@ -9,11 +9,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text("Hello World !", style: TextStyle(
+        child: Text("Hello", style: TextStyle(
           color: MyColors.primary,
           fontSize: 24.0,
           fontWeight: FontWeight.w600,
-          decoration: TextDecoration.lineThrough
+          decoration: TextDecoration.lineThrough, 
+        
         ),),
       ),
       bottomNavigationBar: MyBottomBar(),
