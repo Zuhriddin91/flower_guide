@@ -13,6 +13,7 @@ class HomePage extends StatelessWidget {
           color: MyColors.primary,
           fontSize: 24.0,
           fontWeight: FontWeight.w600,
+          decoration: TextDecoration.lineThrough
         ),),
       ),
       bottomNavigationBar: MyBottomBar(),
