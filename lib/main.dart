@@ -1,4 +1,5 @@
 import 'package:flower_guide/provider/tab_bar_provider.dart';
+import 'package:flower_guide/core/components/app_bar_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flower_guide/core/constants/imports.dart';
 
@@ -9,6 +10,7 @@ void main() {
         ChangeNotifierProvider(create: (_) => BottomBarProvider()),
         ChangeNotifierProvider(create: (_) => TextFieldProvider()),
         ChangeNotifierProvider(create: (_) => TabBarProvider()),
+        ChangeNotifierProvider(create: (_)=> PageViewProvider()),
       ],
       child: const MyApp(),
     ),
@@ -33,8 +35,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         canvasColor: Colors.white,
         fontFamily: 'WorkSans',
+        appBarTheme: MyAppBarTheme.theme,
       ),
-      home: const HomePage(),
+      home:  DetailsPage(),
     );
   }
 }
