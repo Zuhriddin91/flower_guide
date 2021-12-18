@@ -1,3 +1,4 @@
+import 'package:flower_guide/view/widgets/my_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flower_guide/core/constants/imports.dart';
 
@@ -7,12 +8,37 @@ class DetailsFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: getUniqueH(346.0),
       width: getUniqueW(375.0),
-      padding: EdgeInsets.symmetric(horizontal: getUniqueW(24.0)),
+      padding: EdgeInsets.symmetric(
+        horizontal: getUniqueW(24.0),
+        vertical: getUniqueH(24.0),
+      ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          MyTextWidget(
+            "Flower class",
+            color: MyColors.subtitleText,
+            size: 16.0,
+          ),
+          SizedBox(height: getUniqueH(4.0)),
+          MyTextWidget(
+            'Fiddle leaf fig plant',
+            color: MyColors.dark,
+            size: 20.0,
+            weight: FontWeight.w600,
+          ),
+          SizedBox(height: getUniqueH(24.0)),
           _showButtons(),
+          SizedBox(height: getUniqueH(24.0)),
+          MyTextWidget(
+            'About',
+            color: MyColors.dark,
+            size: 20.0,
+            weight: FontWeight.w600,
+          ),
+
+          MyTextWidget(_lorem),
         ],
       ),
     );
@@ -52,16 +78,13 @@ class DetailsFooter extends StatelessWidget {
             ),
           ),
           SizedBox(height: getUniqueH(9.0)),
-          Text(
-            label,
-            style: TextStyle(
-              fontSize: getUniqueW(13.0),
-              color: MyColors.dark
-            ),
-          ),
+          MyTextWidget(label, size: 13.0)
         ],
       );
 
-  BorderRadius _buildRadius(double radius) =>
-      BorderRadius.circular(getUniqueW(radius));
+  BorderRadius _buildRadius(double radius) => BorderRadius.circular(
+        getUniqueW(radius),
+      );
+  final String _lorem =
+      """Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.""";
 }

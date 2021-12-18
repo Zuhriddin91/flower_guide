@@ -5,7 +5,7 @@ import 'package:flower_guide/core/constants/imports.dart';
 
 class DetailsPage extends StatelessWidget {
    DetailsPage({Key? key}) : super(key: key);
-
+   final ScrollController _scrollController = ScrollController();
 
   @override
   Widget build(BuildContext context) {
@@ -13,16 +13,21 @@ class DetailsPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: _buildAppBar(),
-      body: Column(
-        children: [
-          DetailPageCarousel(),
-          DetailsFooter(),
-        ],
+      body: SingleChildScrollView(
+        controller: _scrollController,
+        child: Column(
+          children: [
+            DetailPageCarousel(),
+            DetailsFooter(),
+
+          ],
+        ),
       ),
     );
   }
 
-  AppBar _buildAppBar() => AppBar();
+  AppBar _buildAppBar() => AppBar(
+  );
 
 
 }
