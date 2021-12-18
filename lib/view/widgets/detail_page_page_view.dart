@@ -17,7 +17,7 @@ class DetailPageCarousel extends StatelessWidget {
         (index) => _setImage('https://source.unsplash.com/random/$index'),
       ),
       options: CarouselOptions(
-        height: getUniqueH(380.0),
+        height: getUniqueH(378.0),
         enlargeCenterPage: true,
       ));
 
