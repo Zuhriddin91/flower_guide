@@ -1,7 +1,5 @@
 import 'package:flower_guide/core/constants/imports.dart';
-import 'package:flower_guide/provider/plant_card_provider.dart';
 import 'package:flower_guide/view/widgets/my_category_card.dart';
-import 'package:flower_guide/view/widgets/my_plant_card.dart';
 import 'package:flutter/material.dart';
 
 class MyCategoryGrid extends StatelessWidget {
@@ -9,8 +7,6 @@ class MyCategoryGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isFavourite = Provider.of<PlantCardProvider>(context, listen: false).isFavourite;
-
     return GridView.builder(
       physics:const BouncingScrollPhysics(),
       itemCount: 12,
