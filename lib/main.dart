@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'WorkSans',
         appBarTheme: MyAppBarTheme.theme,
       ),
-      home: const  HomePage(),
+      home:  DetailsPage(),
     );
   }
 }

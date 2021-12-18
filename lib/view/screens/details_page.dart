@@ -1,24 +1,33 @@
-import 'package:flower_guide/view/widgets/detail_page_page_view.dart';
+
+import 'package:flower_guide/view/widgets/detail_footer.dart';
 import 'package:flutter/material.dart';
 import 'package:flower_guide/core/constants/imports.dart';
 
 class DetailsPage extends StatelessWidget {
    DetailsPage({Key? key}) : super(key: key);
-
+   final ScrollController _scrollController = ScrollController();
 
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-      backgroundColor: MyColors.accent,
+      backgroundColor: Colors.white,
       appBar: _buildAppBar(),
-      body: Column(
-        children: [
-          DetailPageCarousel(),
-        ],
+      body: SingleChildScrollView(
+        controller: _scrollController,
+        child: Column(
+          children: [
+            DetailPageCarousel(),
+            DetailsFooter(),
+
+          ],
+        ),
       ),
     );
   }
 
-  AppBar _buildAppBar() => AppBar();
+  AppBar _buildAppBar() => AppBar(
+  );
+
+
 }
