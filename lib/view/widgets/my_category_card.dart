@@ -41,6 +41,8 @@ class MyCategoryCard extends StatelessWidget {
         ),
         child: Text(
           "Succulent",
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
           style: TextStyle(
             fontSize: getUniqueW(16.0),
             fontWeight: FontWeight.w400,

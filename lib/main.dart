@@ -1,6 +1,6 @@
-import 'package:flower_guide/view/widgets/my_category_card.dart';
 import 'package:flower_guide/provider/tab_bar_provider.dart';
 import 'package:flower_guide/core/components/app_bar_theme.dart';
+import 'package:flower_guide/view/screens/introduction_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flower_guide/core/constants/imports.dart';
 
@@ -11,7 +11,7 @@ void main() {
         ChangeNotifierProvider(create: (_) => BottomBarProvider()),
         ChangeNotifierProvider(create: (_) => TextFieldProvider()),
         ChangeNotifierProvider(create: (_) => TabBarProvider()),
-        ChangeNotifierProvider(create: (_)=> PageViewProvider()),
+        ChangeNotifierProvider(create: (_) => PageViewProvider()),
       ],
       child: const MyApp(),
     ),
@@ -38,7 +38,8 @@ class MyApp extends StatelessWidget {
         fontFamily: 'WorkSans',
         appBarTheme: MyAppBarTheme.theme,
       ),
-      home: const  HomePage(),
+      //home: const  HomePage(),
+      home: IntroductionPage(),
     );
   }
 }
