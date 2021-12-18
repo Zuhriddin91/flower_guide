@@ -6,6 +6,7 @@ export 'package:flower_guide/provider/text_field_provider.dart';
 
 // Screens
 export 'package:flower_guide/view/screens/home_page.dart';
+export 'package:flower_guide/view/screens/details_page.dart';
 
 // Widgets
 export 'package:flower_guide/view/widgets/my_bottom_nav_bar.dart';
@@ -20,3 +21,6 @@ export 'package:flutter_svg/flutter_svg.dart';
 export 'package:flower_guide/core/constants/colors.dart';
 export 'package:flower_guide/core/constants/icons.dart';
 export 'package:flower_guide/core/constants/size_config.dart';
+
+// Themes
+import 'package:flower_guide/core/components/app_bar_theme.dart';
