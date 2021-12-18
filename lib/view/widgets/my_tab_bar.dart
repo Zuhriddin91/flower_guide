@@ -28,7 +28,7 @@ class MyTabBar extends StatelessWidget {
             height: getUniqueH(48),
             child: TextButton(
               child: Text(
-                "Tur",
+                "Turlar",
                 style: TextStyle(
                     color: activeTab == 0 ? MyColors.light : MyColors.primary,
                     fontSize: getUniqueW(16),
@@ -53,7 +53,7 @@ class MyTabBar extends StatelessWidget {
             height: getUniqueH(48),
             child: TextButton(
               child: Text(
-                "Toifa",
+                "Toifalar",
                 style: TextStyle(
                     color: activeTab == 1 ? MyColors.light : MyColors.primary,
                     fontSize: getUniqueW(16),
@@ -78,7 +78,7 @@ class MyTabBar extends StatelessWidget {
             height: getUniqueH(48),
             child: TextButton(
               child: Text(
-                "Gull",
+                "Gullar",
                 style: TextStyle(
                     color: activeTab == 2 ? MyColors.light : MyColors.primary,
                     fontSize: getUniqueW(16),

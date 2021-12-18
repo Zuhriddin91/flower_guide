@@ -12,9 +12,11 @@ class MyBottomBar extends StatelessWidget {
       items:  [
         BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/home.svg', color: MyColors.primary,), label: "Home"),
         BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/library.svg', color: MyColors.primary,), label: "Library"),
-        BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/favourite_outlined.svg', color: MyColors.primary, height: 35.0, ), label: "Favourite"),
+        BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/favourite_outlined.svg', color: MyColors.primary, height: 30.0, ), label: "Favourite"),
+        BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/user.svg', color: MyColors.primary, height: 30.0, ), label: "Profile"),
 
       ],
+      type: BottomNavigationBarType.fixed,
       onTap: (index){
         context.read<BottomBarProvider>().changeIndex(index);
       },
