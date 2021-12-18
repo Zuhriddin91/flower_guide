@@ -8,6 +8,7 @@ void main() {
       providers: [
         ChangeNotifierProvider(create: (_) => BottomBarProvider()),
         ChangeNotifierProvider(create: (_) => TextFieldProvider()),
+        ChangeNotifierProvider(create: (_)=> PageViewProvider()),
       ],
       child: const MyApp(),
     ),
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'WorkSans',
         appBarTheme: MyAppBarTheme.theme,
       ),
-      home: const DetailsPage(),
+      home:  DetailsPage(),
     );
   }
 }
