@@ -1,47 +1,25 @@
 import 'package:flower_guide/core/constants/imports.dart';
-import 'package:flower_guide/provider/tab_bar_provider.dart';
-import 'package:flower_guide/view/widgets/my_category_grid.dart';
-import 'package:flower_guide/view/widgets/my_plant_grid.dart';
-import 'package:flower_guide/view/widgets/my_tab_bar.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+   HomePage({Key? key}) : super(key: key);
 
+  late BottomBarProvider _bottomBarProvider;
   @override
   Widget build(BuildContext context) {
+    _bottomBarProvider = context.watch<BottomBarProvider>();
     SizeConfig().init(context);
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
-        children: [
-          // SEARCH SECTION
-          Padding(
-              padding: EdgeInsets.fromLTRB(
-                getUniqueW(24),
-                getUniqueH(100),
-                getUniqueW(24),
-                getUniqueH(16),
-              ),
-              child: const MyTextField()),
-
-          // TABBAR SECTION
-          const MyTabBar(),
-          SizedBox(
-            height: getUniqueH(16),
-          ),
-
-          // LISTVIEW SECTION
-          Flexible(
-            child: 
-            Provider.of<TabBarProvider>(context).index == 2 ?
-                const MyPlantGrid() : const MyCategoryGrid() ,
-            
-            
-          ),
-        ],
-      ),
+      body: _bodyList[_bottomBarProvider.index],
       bottomNavigationBar: const MyBottomBar(),
     );
   }
+
+  final List<Widget> _bodyList =[
+    const HomePageBody(),
+    const HomePageBody(),
+    const MyFavouritesPage(),
+    const HomePageBody(),
+  ];
 }

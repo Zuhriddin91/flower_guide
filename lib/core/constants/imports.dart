@@ -10,6 +10,9 @@ export 'package:flower_guide/provider/tab_bar_provider.dart';
 // Screens
 export 'package:flower_guide/view/screens/home_page.dart';
 export 'package:flower_guide/view/screens/details_page.dart';
+export 'package:flower_guide/view/screens/home_page_body.dart';
+export 'package:flower_guide/view/screens/favourites_page.dart';
+export 'package:flower_guide/view/screens/introduction_page.dart';
 
 // Widgets
 export 'package:flower_guide/view/widgets/my_bottom_nav_bar.dart';
@@ -17,6 +20,9 @@ export 'package:flower_guide/view/widgets/my_text_field.dart';
 export 'package:flower_guide/view/widgets/my_elevated_button.dart';
 export 'package:flower_guide/view/widgets/detail_page_page_view.dart';
 export 'package:flower_guide/view/widgets/my_tab_bar.dart';
+export 'package:flower_guide/view/widgets/my_category_grid.dart';
+export 'package:flower_guide/view/widgets/my_plant_grid.dart';
+export 'package:flower_guide/view/widgets/staggered_item_card.dart';
 
 // Packages
 export 'package:provider/provider.dart';

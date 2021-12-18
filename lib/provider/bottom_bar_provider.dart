@@ -1,16 +1,10 @@
-
-
 import 'package:flutter/foundation.dart';
 
-class BottomBarProvider extends ChangeNotifier{
-
+class BottomBarProvider extends ChangeNotifier {
   int index = 0;
 
-
-  void changeIndex(i) {
-
+  void changeIndex(int i) {
     index = i;
     notifyListeners();
-
   }
 }

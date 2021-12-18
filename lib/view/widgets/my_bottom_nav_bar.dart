@@ -5,21 +5,41 @@ import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
 
 class MyBottomBar extends StatelessWidget {
-  const MyBottomBar({ Key? key }) : super(key: key);
+  const MyBottomBar({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      items:  [
-        BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/home.svg', color: MyColors.primary,), label: "Home"),
-        BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/library.svg', color: MyColors.primary,), label: "Library"),
-        BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/favourite_outlined.svg', color: MyColors.primary, height: 30.0, ), label: "Favourite"),
-        BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/user.svg', color: MyColors.primary, height: 30.0, ), label: "Profile"),
-
+      items: [
+        BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              'assets/icons/home.svg',
+              color: MyColors.primary,
+            ),
+            label: "Home"),
+        BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              'assets/icons/library.svg',
+              color: MyColors.primary,
+            ),
+            label: "Library"),
+        BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              'assets/icons/favourite_outlined.svg',
+              color: MyColors.primary,
+              height: 30.0,
+            ),
+            label: "Favourite"),
+        BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              'assets/icons/user.svg',
+              color: MyColors.primary,
+              height: 30.0,
+            ),
+            label: "Profile"),
       ],
       type: BottomNavigationBarType.fixed,
-      onTap: (index){
-        context.read<BottomBarProvider>().changeIndex(index);
-      },
+      onTap: context.read<BottomBarProvider>().changeIndex,
       currentIndex: context.watch<BottomBarProvider>().index,
     );
   }

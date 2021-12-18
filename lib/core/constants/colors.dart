@@ -10,4 +10,5 @@ class MyColors {
   static const Color light = Color(0xffFAFCFE);
   static const Color error = Color(0xffed4b68);
   static const Color grey = Color(0xffECEFF6);
+  static const Color innerBorder = Color(0xffE1E5EB);
 }

@@ -11,9 +11,8 @@ void main() {
         ChangeNotifierProvider(create: (_) => BottomBarProvider()),
         ChangeNotifierProvider(create: (_) => TextFieldProvider()),
         ChangeNotifierProvider(create: (_) => TabBarProvider()),
-        ChangeNotifierProvider(create: (_)=> PageViewProvider()),
-        ChangeNotifierProvider(create: (_)=> PlantCardProvider()),
-
+        ChangeNotifierProvider(create: (_) => PageViewProvider()),
+        ChangeNotifierProvider(create: (_) => PlantCardProvider()),
       ],
       child: const MyApp(),
     ),
@@ -40,7 +39,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'WorkSans',
         appBarTheme: MyAppBarTheme.theme,
       ),
-      home:  HomePage(),
+      home: HomePage(),
     );
   }
 }
