@@ -4,7 +4,8 @@ import 'package:flower_guide/provider/plant_card_provider.dart';
 import 'package:flutter/material.dart';
 
 class MyPlantCard extends StatelessWidget {
-  const MyPlantCard({Key? key}) : super(key: key);
+  final int index;
+  const MyPlantCard(this.index, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +23,9 @@ class MyPlantCard extends StatelessWidget {
         ],
         color: MyColors.accent,
         borderRadius: BorderRadius.circular(getUniqueW(16)),
-        image: DecorationImage(
+        image:  DecorationImage(
           fit: BoxFit.cover,
-          image: NetworkImage("https://source.unsplash.com/random/"),
+          image: NetworkImage("https://source.unsplash.com/random/$index"),
         ),
       ),
       //alignment: Alignment.bottomCenter,
