@@ -1,10 +1,5 @@
-import 'package:flower_guide/core/constants/colors.dart';
-import 'package:flower_guide/core/constants/icons.dart';
-import 'package:flower_guide/core/constants/size_config.dart';
-import 'package:flower_guide/provider/text_field_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:provider/provider.dart';
+import 'package:flower_guide/core/constants/imports.dart';
 
 class MyTextField extends StatelessWidget {
   const MyTextField({Key? key}) : super(key: key);
@@ -15,7 +10,7 @@ class MyTextField extends StatelessWidget {
     return TextField(
       controller: context.watch<TextFieldProvider>().textController,
       onChanged: (value){
-        context.watch<TextFieldProvider>().value = value;
+        Provider.of<TextFieldProvider>(context, listen: false).value = value;
         context.read<TextFieldProvider>().changValue(value);
       },
       style: TextStyle(color: MyColors.text, fontSize: getUniqueW(16)),

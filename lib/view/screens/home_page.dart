@@ -1,5 +1,6 @@
 import 'package:flower_guide/core/constants/size_config.dart';
 import 'package:flower_guide/view/widgets/my_bottom_nav_bar.dart';
+import 'package:flower_guide/view/widgets/my_elevated_button.dart';
 import 'package:flower_guide/view/widgets/my_text_field.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,7 @@ class HomePage extends StatelessWidget {
               getUniqueH(30),
             ),
             child:const MyTextField()
-          )
+          ),
         ],
       ),
       bottomNavigationBar: const MyBottomBar(),
