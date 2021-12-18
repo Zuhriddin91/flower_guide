@@ -1,3 +1,4 @@
+import 'package:flower_guide/view/widgets/my_category_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flower_guide/core/constants/imports.dart';
 
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
         canvasColor: Colors.white,
         fontFamily: 'WorkSans',
       ),
-      home: const HomePage(),
+      //home: const HomePage(),
+      home: MyCategoryCard(),
     );
   }
 }
