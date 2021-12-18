@@ -8,4 +8,6 @@ class MyColors {
   static const Color subtitleText = Color(0xff8C8CA1);
   static const Color accent = Color(0xffF5F7FA);
   static const Color light = Color(0xffFAFCFE);
+  static const Color error = Color(0xffed4b68);
+  static const Color grey = Color(0xffECEFF6);
 }

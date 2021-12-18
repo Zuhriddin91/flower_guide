@@ -13,7 +13,7 @@ export 'package:flower_guide/view/screens/details_page.dart';
 export 'package:flower_guide/view/widgets/my_bottom_nav_bar.dart';
 export 'package:flower_guide/view/widgets/my_text_field.dart';
 export 'package:flower_guide/view/widgets/my_elevated_button.dart';
-
+export 'package:flower_guide/view/widgets/detail_page_page_view.dart';
 // Packages
 export 'package:provider/provider.dart';
 export 'package:flutter_svg/flutter_svg.dart';
