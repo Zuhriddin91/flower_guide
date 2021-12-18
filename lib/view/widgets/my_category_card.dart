@@ -17,7 +17,13 @@ class MyCategoryCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(
           getUniqueW(16.0),
         ),
-        color: Colors.red,
+        color: MyColors.accent,
+        boxShadow: [
+          BoxShadow(
+              color: MyColors.dark.withOpacity(0.15),
+              blurRadius: 1.0,
+              spreadRadius: 1.0)
+        ],
       ),
       height: getUniqueH(152.0),
       width: getUniqueW(156.0),
@@ -27,7 +33,7 @@ class MyCategoryCard extends StatelessWidget {
           left: getUniqueW(16.0),
         ),
         height: getUniqueH(42.0),
-        width: getUniqueW(156.0),
+        width: double.infinity,
         decoration: BoxDecoration(
           color: MyColors.light,
           borderRadius: BorderRadius.only(

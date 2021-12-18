@@ -1,3 +1,4 @@
+import 'package:flower_guide/provider/plant_card_provider.dart';
 import 'package:flower_guide/view/widgets/my_category_card.dart';
 import 'package:flower_guide/provider/tab_bar_provider.dart';
 import 'package:flower_guide/core/components/app_bar_theme.dart';
@@ -12,6 +13,8 @@ void main() {
         ChangeNotifierProvider(create: (_) => TextFieldProvider()),
         ChangeNotifierProvider(create: (_) => TabBarProvider()),
         ChangeNotifierProvider(create: (_)=> PageViewProvider()),
+        ChangeNotifierProvider(create: (_)=> PlantCardProvider()),
+
       ],
       child: const MyApp(),
     ),
