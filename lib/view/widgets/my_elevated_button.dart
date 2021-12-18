@@ -2,13 +2,13 @@ import 'package:flower_guide/core/constants/imports.dart';
 import 'package:flutter/material.dart';
 
 class MyElevatedButton extends StatelessWidget {
-  VoidCallback onPressed;
-  String label;
-  Color color;
-  double radius;
-  double textSize;
+  final VoidCallback onPressed;
+  final String label;
+  final Color color;
+  final double radius;
+  final double textSize;
 
-  MyElevatedButton({
+  const MyElevatedButton({
     Key? key,
     required this.onPressed,
     required this.label,

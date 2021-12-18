@@ -1,3 +1,4 @@
+import 'package:flower_guide/provider/tab_bar_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flower_guide/core/constants/imports.dart';
 
@@ -7,6 +8,7 @@ void main() {
       providers: [
         ChangeNotifierProvider(create: (_) => BottomBarProvider()),
         ChangeNotifierProvider(create: (_) => TextFieldProvider()),
+        ChangeNotifierProvider(create: (_) => TabBarProvider()),
       ],
       child: const MyApp(),
     ),
