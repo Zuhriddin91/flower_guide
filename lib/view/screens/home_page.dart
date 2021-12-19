@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
   final List<Widget> _bodyList =[
     const HomePageBody(),
     const HomePageBody(),
-    const MyFavouritesPage(),
+    const FavouritesPage(),
     const HomePageBody(),
   ];
 }

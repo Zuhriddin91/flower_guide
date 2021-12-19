@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flower_guide/core/constants/imports.dart';
 
-
 class HomePageBody extends StatelessWidget {
   const HomePageBody({
     Key? key,
@@ -10,13 +9,28 @@ class HomePageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        // TITLE SECTION
+        SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Text(
+              "Bosh sahifa",
+              style: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: getUniqueW(16),
+              ),
+            ),
+          ),
+        ),
+        
         // SEARCH SECTION
         Padding(
             padding: EdgeInsets.fromLTRB(
-              getUniqueW(24),
-              getUniqueH(100),
-              getUniqueW(24),
+              getUniqueW(16),
+              getUniqueH(0),
+              getUniqueW(16),
               getUniqueH(16),
             ),
             child: const MyTextField()),

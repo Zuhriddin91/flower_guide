@@ -23,7 +23,7 @@ class MyCategoryGrid extends StatelessWidget {
           crossAxisCount: 2,
         ),
         itemBuilder: (context, index) {
-          return MyCategoryCard();
+          return MyCategoryCard(index);
         });
   }
 }

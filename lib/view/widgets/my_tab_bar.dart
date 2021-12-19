@@ -9,8 +9,9 @@ class MyTabBar extends StatelessWidget {
     int activeTab = Provider.of<TabBarProvider>(context).index;
 
     return Container(
+      margin: EdgeInsets.only(left: getUniqueW(16.0)),
       padding: EdgeInsets.all(getUniqueW(2)),
-      width: getUniqueW(329),
+      width: getUniqueW(343),
       height: getUniqueH(52),
       decoration: BoxDecoration(
         color: MyColors.accent,

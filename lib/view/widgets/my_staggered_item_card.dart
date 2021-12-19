@@ -4,21 +4,32 @@ import 'package:flower_guide/core/constants/imports.dart';
 
 class MyStaggeredItemCard extends StatelessWidget {
   final int index;
-
   const MyStaggeredItemCard(this.index, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(getUniqueW(16.0)),
-          border: Border.all(color: MyColors.innerBorder)),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          _showImage(),
-          _footer(),
-        ],
+    return InkWell(
+      onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => DetailsPage(),
+          ),
+        );
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(
+            getUniqueW(16.0),
+          ),
+          border: Border.all(color: MyColors.innerBorder),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _showImage(),
+            _footer(),
+          ],
+        ),
       ),
     );
   }
@@ -57,11 +68,24 @@ class MyStaggeredItemCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            MyTextWidget('Houseplant', size: 13.0, maxLines: 2,),
+            MyTextWidget(
+              'Houseplant',
+              size: 13.0,
+              maxLines: 2,
+            ),
             SizedBox(height: getUniqueH(4.0)),
-            MyTextWidget('Monsterav ', size: 16.0, color: MyColors.dark, maxLines: 2,),
+            MyTextWidget(
+              'Monsterav ',
+              size: 16.0,
+              color: MyColors.dark,
+              maxLines: 2,
+            ),
             SizedBox(height: getUniqueH(4.0)),
-            MyTextWidget('Monsteras family ', size: 13.0,maxLines: 2,),
+            MyTextWidget(
+              'Monsteras family ',
+              size: 13.0,
+              maxLines: 2,
+            ),
           ],
         ),
       );
