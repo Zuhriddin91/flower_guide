@@ -6,12 +6,14 @@ class MyAuthTextField extends StatelessWidget {
   final TextEditingController controller;
   final TextInputType keyboardType;
   String? Function(String?)? validator;
+  Widget? suffixIcon;
   late bool isVisible;
 
   MyAuthTextField({
     required this.controller,
     required this.hintText,
     required this.keyboardType,
+    this.suffixIcon,
     this.validator,
     Key? key,
   }) : super(key: key);
@@ -33,15 +35,7 @@ class MyAuthTextField extends StatelessWidget {
         // context.read<TextFieldProvider>().changValue(value);
       },
       decoration: InputDecoration(
-        suffixIcon: keyboardType == TextInputType.visiblePassword
-            ? IconButton(
-                onPressed: () {
-                  isVisible = !isVisible;
-                  context.read<TextFieldProvider>().changeVisible(isVisible);
-                },
-                icon: context.watch<TextFieldProvider>().eye,
-              )
-            : null,
+        suffixIcon: suffixIcon,
         hintText: hintText,
         filled: true,
         fillColor: MyColors.accent,

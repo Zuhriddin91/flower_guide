@@ -1,17 +1,19 @@
 import 'package:flower_guide/core/constants/colors.dart';
 import 'package:flower_guide/core/constants/imports.dart';
-import 'package:flower_guide/view/screens/sign_up_page.dart';
+import 'package:flower_guide/view/screens/sign_in_page.dart';
 import 'package:flower_guide/view/widgets/text_fields/my_auth_text_field.dart';
 import 'package:flutter/material.dart';
 
-class SignInPage extends StatelessWidget {
-  SignInPage({Key? key}) : super(key: key);
+class SignUpPage extends StatelessWidget {
+  SignUpPage({Key? key}) : super(key: key);
 
   final TextEditingController _phoneController =
       TextEditingController(text: '+998');
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _verifyController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   late bool isVisible;
+  String kodYuborish = 'Kod yuborish';
 
   @override
   Widget build(BuildContext context) {
@@ -48,18 +50,18 @@ class SignInPage extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(getUniqueW(20))),
-                    primary: MyColors.accent,
+                    primary: MyColors.primary,
                     fixedSize: Size(SizeConfig.screenWidth, getUniqueH(40))),
                 onPressed: () {},
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SvgPicture.asset(MyIcons.google, color: MyColors.primary),
+                    SvgPicture.asset(MyIcons.google, color: MyColors.light),
                     SizedBox(width: getUniqueW(8.0)),
                     Text(
                       "Google orqali kirish",
                       style: TextStyle(
-                          fontSize: getUniqueW(16.0), color: MyColors.dark),
+                          fontSize: getUniqueW(16.0),fontWeight: FontWeight.w600 ),
                     ),
                   ],
                 ),
@@ -80,7 +82,7 @@ class SignInPage extends StatelessWidget {
               // PASSWORD SECTION
               MyAuthTextField(
                 controller: _passwordController,
-                hintText: "Parolingizni kiriting",
+                hintText: "Yangi parolingizni kiriting",
                 keyboardType: TextInputType.visiblePassword,
                 suffixIcon: IconButton(
                   onPressed: () {
@@ -93,25 +95,39 @@ class SignInPage extends StatelessWidget {
                   if (value!.isEmpty) "wwwww";
                 },
               ),
-              SizedBox(height: getUniqueH(4.0)),
+              SizedBox(height: getUniqueH(16.0)),
 
-              // FORGOT PASSWORD SECTION
-              Row(
-                children: [
-                  const Spacer(),
-                  TextButton(
-                    onPressed: () {},
-                    child: const Text(
-                      "Parolni unutdingizmi?",
-                      style: TextStyle(
-                          color: MyColors.primary, fontWeight: FontWeight.w600),
-                    ),
+              // VERIFY SECTION
+              MyAuthTextField(
+                controller: _verifyController,
+                hintText: "Tasdiqlash kodi",
+                keyboardType: TextInputType.number,
+                suffixIcon: TextButton(
+                  onPressed: () {
+                    kodYuborish =
+                        'Qayta kod yuborish'; // providerga yozishim kk
+                  },
+                  child: Text(
+                    kodYuborish,
+                    style: TextStyle(fontSize: getUniqueW(14)),
                   ),
+                ),
+                validator: (value) {
+                  if (value!.isEmpty) "wwwww";
+                },
+              ),
+              SizedBox(height: getUniqueH(16.0)),
+
+              // CODE DURATION
+              Row(
+                children: const [
+                  Spacer(),
+                  Text(" 2:00 daqiqada kod keladi"),
                 ],
               ),
-              SizedBox(height: getUniqueH(4.0)),
+              SizedBox(height: getUniqueH(16.0)),
 
-              // LOG IN SECTION
+              // SIGN UP SECTION
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
@@ -120,21 +136,21 @@ class SignInPage extends StatelessWidget {
                     fixedSize: Size(SizeConfig.screenWidth, getUniqueH(40))),
                 onPressed: () {},
                 child: Text(
-                  "Kirish",
+                  "Ro'yxatdan o'tish",
                   style: TextStyle(
                       fontWeight: FontWeight.w600, fontSize: getUniqueW(16.0)),
                 ),
               ),
               SizedBox(height: getUniqueH(32.0)),
 
-              // SIGN UP SECTION
-              const Text("Hali ro'yxatdan o'tmaganmisiz?"),
+              // SIGN IN SECTION
+              const Text("Profilingiz bormi?"),
               TextButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SignUpPage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SignInPage()));
                 },
                 child: const Text(
-                  "Ro'yxatdan o'tish",
+                  "Tizimga kirish",
                   style: TextStyle(
                       color: MyColors.primary, fontWeight: FontWeight.w600),
                 ),
