@@ -1,4 +1,5 @@
 import 'package:flower_guide/core/constants/imports.dart';
+import 'package:flower_guide/view/screens/sign_in_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -20,6 +21,6 @@ class HomePage extends StatelessWidget {
     const HomePageBody(),
     const HomePageBody(),
     const FavouritesPage(),
-    const HomePageBody(),
+    SignInPage(),
   ];
 }

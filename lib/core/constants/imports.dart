@@ -16,7 +16,7 @@ export 'package:flower_guide/view/screens/introduction_page.dart';
 
 // Widgets
 export 'package:flower_guide/view/widgets/my_bottom_nav_bar.dart';
-export 'package:flower_guide/view/widgets/my_text_field.dart';
+export 'package:flower_guide/view/widgets/text_fields/my_search_text_field.dart';
 export 'package:flower_guide/view/widgets/my_elevated_button.dart';
 export 'package:flower_guide/view/widgets/detail_page_page_view.dart';
 export 'package:flower_guide/view/widgets/my_tab_bar.dart';

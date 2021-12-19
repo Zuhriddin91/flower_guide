@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flower_guide/core/constants/imports.dart';
 
-class MyTextField extends StatelessWidget {
-  const MyTextField({Key? key}) : super(key: key);
+class MySearchTextField extends StatelessWidget {
+  
+  const MySearchTextField({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -33,7 +33,7 @@ class HomePageBody extends StatelessWidget {
               getUniqueW(16),
               getUniqueH(16),
             ),
-            child: const MyTextField()),
+            child: const MySearchTextField()),
 
         // TABBAR SECTION
         const MyTabBar(),
