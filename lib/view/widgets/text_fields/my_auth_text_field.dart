@@ -8,13 +8,15 @@ class MyAuthTextField extends StatelessWidget {
   String? Function(String?)? validator;
   late bool isVisible;
 
-  MyAuthTextField(
-      {required this.controller,
-      required this.hintText,
-      required this.keyboardType,
-      this.validator,
-      Key? key})
-      : super(key: key);
+  MyAuthTextField({
+    required this.controller,
+    required this.hintText,
+    required this.keyboardType,
+    this.validator,
+    Key? key,
+  }) : super(key: key);
+
+ late TextFieldProvider _fieldProvider;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class MyAuthTextField extends StatelessWidget {
       controller: controller,
       validator: validator,
       keyboardType: keyboardType,
-      obscureText: keyboardType == TextInputType.visiblePassword ? true : false,
+      obscureText: (keyboardType == TextInputType.visiblePassword && isVisible) ? true : false,
       onChanged: (value) {
         // Provider.of<TextFieldProvider>(context, listen: false).value =
         //     value;

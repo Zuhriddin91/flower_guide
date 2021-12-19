@@ -13,6 +13,8 @@ export 'package:flower_guide/view/screens/details_page.dart';
 export 'package:flower_guide/view/screens/home_page_body.dart';
 export 'package:flower_guide/view/screens/favourites_page.dart';
 export 'package:flower_guide/view/screens/introduction_page.dart';
+export 'package:flower_guide/view/screens/result_page.dart';
+
 
 // Widgets
 export 'package:flower_guide/view/widgets/my_bottom_nav_bar.dart';
@@ -23,6 +25,8 @@ export 'package:flower_guide/view/widgets/my_tab_bar.dart';
 export 'package:flower_guide/view/widgets/my_category_grid.dart';
 export 'package:flower_guide/view/widgets/my_plant_grid.dart';
 export 'package:flower_guide/view/widgets/my_staggered_item_card.dart';
+export 'package:flower_guide/view/widgets/my_text_widget.dart';
+
 
 // Packages
 export 'package:provider/provider.dart';
