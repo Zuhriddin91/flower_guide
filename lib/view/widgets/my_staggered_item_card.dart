@@ -1,4 +1,3 @@
-import 'package:flower_guide/view/widgets/my_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flower_guide/core/constants/imports.dart';
 

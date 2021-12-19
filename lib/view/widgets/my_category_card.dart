@@ -1,5 +1,4 @@
 import 'package:flower_guide/core/constants/imports.dart';
-import 'package:flower_guide/view/screens/result_page.dart';
 import 'package:flutter/material.dart';
 
 class MyCategoryCard extends StatelessWidget {
