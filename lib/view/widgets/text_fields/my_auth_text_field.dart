@@ -5,6 +5,7 @@ class MyAuthTextField extends StatelessWidget {
   final String? hintText;
   final TextEditingController controller;
   final TextInputType keyboardType;
+  final String labelText;
   String? Function(String?)? validator;
   Widget? suffixIcon;
   late bool isVisible;
@@ -13,6 +14,7 @@ class MyAuthTextField extends StatelessWidget {
     required this.controller,
     required this.hintText,
     required this.keyboardType,
+    required this.labelText,
     this.suffixIcon,
     this.validator,
     Key? key,
@@ -37,6 +39,8 @@ class MyAuthTextField extends StatelessWidget {
       decoration: InputDecoration(
         suffixIcon: suffixIcon,
         hintText: hintText,
+        labelText: labelText,
+        alignLabelWithHint: true,
         filled: true,
         fillColor: MyColors.accent,
         border: UnderlineInputBorder(

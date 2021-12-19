@@ -21,6 +21,7 @@ class SignUpPage extends StatelessWidget {
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
+      
       body: Form(
         key: _formKey,
         child: Padding(
@@ -72,6 +73,7 @@ class SignUpPage extends StatelessWidget {
               MyAuthTextField(
                 controller: _phoneController,
                 hintText: "Telefon raqam",
+                labelText: 'Telefon raqam',
                 keyboardType: TextInputType.phone,
                 validator: (value) {
                   if (value!.isEmpty) "wwwww";
@@ -83,6 +85,7 @@ class SignUpPage extends StatelessWidget {
               MyAuthTextField(
                 controller: _passwordController,
                 hintText: "Yangi parolingizni kiriting",
+                labelText: 'Parol',
                 keyboardType: TextInputType.visiblePassword,
                 suffixIcon: IconButton(
                   onPressed: () {
@@ -101,6 +104,7 @@ class SignUpPage extends StatelessWidget {
               MyAuthTextField(
                 controller: _verifyController,
                 hintText: "Tasdiqlash kodi",
+                labelText: 'Tasdiqlash kodi',
                 keyboardType: TextInputType.number,
                 suffixIcon: TextButton(
                   onPressed: () {

@@ -1,3 +1,4 @@
+import 'package:flower_guide/core/constants/images.dart';
 import 'package:flower_guide/core/constants/imports.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,7 @@ class IntroductionPage extends StatelessWidget {
       body: Stack(
         children: [
           Image.asset(
-            "assets/images/introduction_page.png",
+            MyImages.intro,
             fit: BoxFit.cover,
             height: getUniqueH(490.6),
             width: getUniqueW(375.0),
