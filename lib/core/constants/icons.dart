@@ -18,4 +18,5 @@ class MyIcons {
   static String user = 'assets/icons/user.svg';
   static String warning = 'assets/icons/warning.svg';
   static String arrow = 'assets/icons/arrow.svg';
+  static String google = 'assets/icons/google.svg';
 }
