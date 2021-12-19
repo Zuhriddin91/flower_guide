@@ -1,5 +1,4 @@
 import 'package:flower_guide/core/constants/imports.dart';
-import 'package:flower_guide/provider/tab_bar_provider.dart';
 import 'package:flutter/material.dart';
 
 class MyTabBar extends StatelessWidget {

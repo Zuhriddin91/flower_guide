@@ -2,10 +2,10 @@ import 'package:flower_guide/view/widgets/my_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flower_guide/core/constants/imports.dart';
 
-class StaggeredItemCard extends StatelessWidget {
-  int index;
+class MyStaggeredItemCard extends StatelessWidget {
+  final int index;
 
-  StaggeredItemCard(this.index, {Key? key}) : super(key: key);
+  const MyStaggeredItemCard(this.index, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class StaggeredItemCard extends StatelessWidget {
   Container _footer() => Container(
         padding: EdgeInsets.symmetric(
           horizontal: getUniqueW(12.0),
-          vertical: getUniqueH(16.0),
+          vertical: getUniqueH(12.0),
         ),
         decoration: BoxDecoration(
           color: Colors.white,
@@ -57,12 +57,14 @@ class StaggeredItemCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            MyTextWidget('Houseplant', size: 13.0),
+            MyTextWidget('Houseplant', size: 13.0, maxLines: 2,),
             SizedBox(height: getUniqueH(4.0)),
-            MyTextWidget('Monstera', size: 16.0, color: MyColors.dark),
+            MyTextWidget('Monsterav ', size: 16.0, color: MyColors.dark, maxLines: 2,),
+            SizedBox(height: getUniqueH(4.0)),
+            MyTextWidget('Monsteras family ', size: 13.0,maxLines: 2,),
           ],
         ),
       );
 
-  Radius _buildRadius() => Radius.circular(getUniqueW(16.0));
+  Radius _buildRadius() => Radius.circular(getUniqueW(15.0));
 }

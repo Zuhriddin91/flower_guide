@@ -1,6 +1,4 @@
 import 'package:flower_guide/provider/plant_card_provider.dart';
-import 'package:flower_guide/provider/tab_bar_provider.dart';
-import 'package:flower_guide/core/components/app_bar_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flower_guide/core/constants/imports.dart';
 

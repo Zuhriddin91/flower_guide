@@ -22,7 +22,7 @@ export 'package:flower_guide/view/widgets/detail_page_page_view.dart';
 export 'package:flower_guide/view/widgets/my_tab_bar.dart';
 export 'package:flower_guide/view/widgets/my_category_grid.dart';
 export 'package:flower_guide/view/widgets/my_plant_grid.dart';
-export 'package:flower_guide/view/widgets/staggered_item_card.dart';
+export 'package:flower_guide/view/widgets/my_staggered_item_card.dart';
 
 // Packages
 export 'package:provider/provider.dart';

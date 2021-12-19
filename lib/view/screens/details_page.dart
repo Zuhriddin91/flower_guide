@@ -18,7 +18,7 @@ class DetailsPage extends StatelessWidget {
         child: Column(
           children: [
             DetailPageCarousel(),
-            DetailsFooter(),
+            const DetailsFooter(),
 
           ],
         ),

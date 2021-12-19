@@ -14,16 +14,17 @@ class MyCategoryCard extends StatelessWidget {
           image: NetworkImage("https://source.unsplash.com/random"),
           fit: BoxFit.cover,
         ),
+        border: Border.all(color: MyColors.innerBorder),
         borderRadius: BorderRadius.circular(
           getUniqueW(16.0),
         ),
         color: MyColors.accent,
-        boxShadow: [
-          BoxShadow(
-              color: MyColors.dark.withOpacity(0.15),
-              blurRadius: 1.0,
-              spreadRadius: 1.0)
-        ],
+        // boxShadow: [
+        //   BoxShadow(
+        //       color: MyColors.dark.withOpacity(0.15),
+        //       blurRadius: 1.0,
+        //       spreadRadius: 1.0)
+        // ],
       ),
       height: getUniqueH(152.0),
       width: getUniqueW(156.0),
