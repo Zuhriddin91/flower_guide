@@ -3,10 +3,14 @@ import 'package:flower_guide/core/constants/imports.dart';
 
 class MyStaggeredItemCard extends StatelessWidget {
   final int index;
-  const MyStaggeredItemCard(this.index, {Key? key}) : super(key: key);
+
+  MyStaggeredItemCard(this.index, {Key? key}) : super(key: key);
+
+  late FavouriteProvider _favouriteProvider;
 
   @override
   Widget build(BuildContext context) {
+    _favouriteProvider = context.watch<FavouriteProvider>();
     return InkWell(
       onTap: () {
         Navigator.of(context).push(
@@ -47,7 +51,13 @@ class MyStaggeredItemCard extends StatelessWidget {
             Positioned(
                 top: getUniqueH(16.0),
                 right: getUniqueW(14.55),
-                child: SvgPicture.asset(MyIcons.favouriteActive))
+                child: InkWell(
+                    onTap: _favouriteProvider.onLikeButtonPressed,
+                    child: SvgPicture.asset(
+                      _favouriteProvider.isLike
+                          ? MyIcons.favouriteActive
+                          : MyIcons.favouriteOutlined,
+                    )))
           ],
         ),
       );
