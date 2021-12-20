@@ -6,6 +6,8 @@ export 'package:flower_guide/provider/text_field_provider.dart';
 export 'package:flower_guide/provider/page_view_provider.dart';
 export 'package:flower_guide/provider/home_provider.dart';
 export 'package:flower_guide/provider/tab_bar_provider.dart';
+export 'package:flower_guide/provider/favourite_provider.dart';
+
 
 // Screens
 export 'package:flower_guide/view/screens/home_page.dart';

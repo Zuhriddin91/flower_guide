@@ -1,3 +1,4 @@
+import 'package:flower_guide/provider/favourite_provider.dart';
 import 'package:flower_guide/provider/plant_card_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flower_guide/core/constants/imports.dart';
@@ -11,6 +12,7 @@ void main() {
         ChangeNotifierProvider(create: (_) => TabBarProvider()),
         ChangeNotifierProvider(create: (_) => PageViewProvider()),
         ChangeNotifierProvider(create: (_) => PlantCardProvider()),
+        ChangeNotifierProvider(create: (_)=> FavouriteProvider()),
       ],
       child: const MyApp(),
     ),
