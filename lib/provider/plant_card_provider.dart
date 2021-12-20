@@ -9,7 +9,7 @@ class PlantCardProvider extends ChangeNotifier{
 
   void changeFavourite(bool checkFavourite){
     isFavourite = checkFavourite;
-    print(checkFavourite);
+    //print(checkFavourite);
     notifyListeners();
   }
 }

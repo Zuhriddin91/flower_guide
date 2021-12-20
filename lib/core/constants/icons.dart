@@ -19,4 +19,7 @@ class MyIcons {
   static String warning = 'assets/icons/warning.svg';
   static String arrow = 'assets/icons/arrow.svg';
   static String google = 'assets/icons/google.svg';
+  static String logo = 'assets/icons/logo.svg';
+  static String logoFill = 'assets/icons/logo_fill.svg';
+
 }
